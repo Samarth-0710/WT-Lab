@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Samarth - Resume</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+            color: #222;
+            padding: 40px;
+        }
+
+        .resume {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .header {
+            position: relative;
+            text-align: center;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #222;
+            min-height: 125px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+            padding-top: 15px;
+        }
+
+        .header p {
+            color: #555;
+            font-size: 15px;
+        }
+
+        .profile-photo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            border: 3px solid #1f4e79;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 68% 32%;
+            margin-top: 30px;
+        }
+
+        .left {
+            padding-right: 35px;
+        }
+
+        .right {
+            padding-left: 35px;
+            border-left: 2px solid #222;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 21px;
+            color: #1f4e79;
+            border-bottom: 2px solid #1f4e79;
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #222;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 7px;
+        }
+
+        li {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 4px;
+        }
+
+        .education-item,
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .date {
+            color: #666;
+            font-size: 13px;
+            float: right;
+        }
+
+        .skills p {
+            margin-bottom: 8px;
+        }
+
+        .contact p {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .contact a {
+            color: #1f4e79;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+
+        .right h2 {
+            margin-top: 5px;
+        }
+
+        @media (max-width: 800px) {
+            body {
+                padding: 15px;
+            }
+
+            .resume {
+                padding: 25px;
+            }
+
+            .header {
+                padding-right: 0;
+                min-height: 145px;
+            }
+
+            .profile-photo {
+                position: relative;
+                display: block;
+                margin: 0 auto 10px auto;
+                width: 90px;
+                height: 90px;
+            }
+
+            .header h1 {
+                padding-top: 0;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .left {
+                padding-right: 0;
+            }
+
+            .right {
+                padding-left: 0;
+                border-left: none;
+                border-top: 2px solid #222;
+                padding-top: 25px;
+            }
+
+            .date {
+                float: none;
+                display: block;
+                margin-top: 3px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="resume">
+
+    <div class="header">
+
+        <img src="Dp_Image.png" alt="M Samarth" class="profile-photo">
+
+        <h1>M Samarth</h1>
+        <p>Bangalore, Karnataka</p>
+
+    </div>
+
+    <div class="container">
+
+        <div class="left">
+
+            <section>
+                <h2>Education</h2>
+
+                <div class="education-item">
+                    <h3>Bangalore Institute of Technology, Bengaluru</h3>
+                    <span class="date">2024 - 2028</span>
+                    <p>Bachelor of Engineering (B.E.) in Computer Science and Engineering</p>
+                    <p><b>CGPA:</b> 9.04 (Till 4th Semester)</p>
+                </div>
+
+                <div class="education-item">
+                    <h3>Vision PU College, Kalyan Nagar, Bengaluru</h3>
+                    <span class="date">2022 - 2024</span>
+                    <p>Pre-University Course (Class XII), KSEAB</p>
+                    <p><b>Percentage:</b> 89.5%</p>
+                </div>
+
+                <div class="education-item">
+                    <h3>SJR Public School, HBR Layout, Bengaluru</h3>
+                    <span class="date">2021 - 2022</span>
+                    <p>Secondary School (Class X), CBSE</p>
+                    <p><b>Percentage:</b> 72%</p>
+                </div>
+
+            </section>
+
+            <section class="skills">
+                <h2>Technical Skills</h2>
+
+                <p><b>Programming Languages:</b> C, Python, SQL, HTML, CSS</p>
+                <p><b>Databases:</b> MySQL</p>
+                <p><b>Developer Tools:</b> Git, GitHub, VS Code, Figma</p>
+                <p><b>Core Concepts:</b> DSA, DAA, DBMS</p>
+
+            </section>
+
+            <section>
+
+                <h2>Projects</h2>
+
+                <div class="project">
+                    <h3>Industrial Brain</h3>
+                    <p><b>Technologies:</b> Python, FastAPI, React, Next.js</p>
+                    <p>AI-powered industrial dashboard for monitoring manufacturing data and generating intelligent insights.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Friday - AI Personal Assistant</h3>
+                    <p><b>Technologies:</b> Python, Speech Recognition, Gemini API</p>
+                    <p>Voice-controlled AI assistant with speech recognition, text-to-speech, OCR and task automation.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Flight Management System</h3>
+                    <p><b>Technologies:</b> Flask, MySQL</p>
+                    <p>Database-driven web application for managing flights, passengers, bookings and payments.</p>
+                </div>
+
+                <div class="project">
+                    <h3>EduVision</h3>
+                    <p><b>Technologies:</b> Python, Manim, Groq API</p>
+                    <p>AI-assisted educational platform that converts mathematical concepts into animated visualizations.</p>
+                </div>
+
+            </section>
+
+        </div>
+
+        <div class="right">
+
+            <section class="contact">
+
+                <h2>Personal Details</h2>
+
+                <p>
+                    <span class="highlight">Name:</span> M Samarth
+                </p>
+
+                <p>
+                    <span class="highlight">Location:</span> Bangalore, Karnataka
+                </p>
+
+                <p>
+                    <span class="highlight">Phone:</span> +91 7019354841
+                </p>
+
+                <p>
+                    <span class="highlight">Email:</span>
+                    <a href="mailto:samarthmuni7@gmail.com">
+                        samarthmuni7@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <span class="highlight">LinkedIn:</span>
+                    <a href="https://www.linkedin.com/in/m-samarth-b7516636b/" target="_blank">
+                        LinkedIn
+                    </a>
+                </p>
+
+                <p>
+                    <span class="highlight">GitHub:</span>
+                    <a href="https://github.com/Samarth-0710" target="_blank">
+                        GitHub
+                    </a>
+                </p>
+
+                <p>
+                    <span class="highlight">LeetCode:</span>
+                    <a href="https://leetcode.com/u/35DIXMtH9e/" target="_blank">
+                        LeetCode
+                    </a>
+                </p>
+
+            </section>
+
+            <section>
+
+                <h2>Core Areas</h2>
+
+                <ul>
+                    <li>Data Structures & Algorithms</li>
+                    <li>Database Management Systems</li>
+                    <li>Object-Oriented Programming</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Web Development</li>
+                    <li>Backend Development</li>
+                </ul>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
