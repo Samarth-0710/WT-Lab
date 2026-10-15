@@ -69,7 +69,7 @@ time::before {
 
 time::after {
     content: '>>';
-    color: rgb(20, 189, 8);
+    color: rgb(200, 51, 51);
 }
 
 img {
