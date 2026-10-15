@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    color: rgb(231, 29, 29);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: rgb(240, 140, 17);
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: brown;
+    margin: 2px 0;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Name and USN */
+.student-info {
+    text-align: center;
+    color: rgb(31, 31, 31);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 20px;
+}
+
+div {
+    padding: 15px;
+    border: 1px solid #ca1ac7;
+    background-color: #d2ebf1;
+}
+
+span {
+    color: rgb(243, 16, 16);
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 6px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+time::before {
+    content: '<<';
+    color: rgb(189, 8, 162);
+}
+
+time::after {
+    content: '>>';
+    color: rgb(20, 189, 8);
+}
+
+img {
+    margin-left: 15px;
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    max-width: 100%;
+    background-color: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.01) rotate(-6deg);
+    background: linear-gradient(105deg, #2b1055, #7597de);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(199, 0, 159);
+}
+
+a:hover {
+    color: rgb(173, 99, 159);
+    text-decoration: none;
+}
+
+.highlight {
+    background-color: yellow;
+    padding: 12px;
+}
+
+.center {
+    text-align: center;
+}
+
+#special-paragraph {
+    font-size: 1.2em;
+    color: rgb(22, 0, 162);
+    background-color: #999898;
+    padding: 10px;
+    border-left: 5px solid #8e44ad;
+}
+
+h2,
+h3,
+p,
+div,
+hr {
+    margin: 20px;
+}
+
+.mymain {
+    background-color: rgb(113, 240, 225);
+    min-height: 100vh;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgb(2, 2, 2);
+    margin: 50px;
+    width: 1000px;
+}
+
+#anchortag {
+    color: white;
+    display: inline-block;
+    background-color: rgb(102, 99, 99);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 2s ease;
+}
+
+#anchortag:hover {
+    transform: scale(1) rotate(-10deg);
+    background: linear-gradient(to right, aqua, blue, violet);
+    font-weight: bold;
+}
