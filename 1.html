@@ -1,141 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Newspaper</title>
-    <style>
-        body {
-            background-color: #f5f5dc;
-            font-family: Arial;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .newspaper{
-            align-items: center;
-            justify-content: center;
-            border: 2px solid black;
-            padding: 6px;
-            width: 1200px;
-            height: auto;
-            border-radius:15px;
-        }
-        header {
-            background-color: navy;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-        section {
-            background-color: lightblue;
-            color: darkblue;
-            padding: 15px;
-            
-        }
-        .article{
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-        }
-        article {
-            background-color: white;
-            color: black;
-            padding: 10px;
-            margin: 10px;
-            border-left: 5px solid brown;
-        }
-        aside {
-            background-color: rgb(252, 252, 142);
-            color: brown;
-            padding: 10px;
-            border-left: 5px solid green;
-        }
-        figure {
-            background-color: lightslategray;
-            color: yellow;
-            padding: 10px;
-            text-align: center;
-            border-radius: 20px;
-            border: 10px solid darkred;
-
-        }
-        table {
-            background-color: pink;
-            color: darkred;
-            padding: 10px;
-            margin: auto;
-            width: 500px;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 15px 20px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-            font-size: 16px;
-        }
-        th {
-            background-color: darkred;
-            color: white;
-        }
-        footer {
-            background-color: gray;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-        img{
-            height: 400px;
-            width: 600px;
-            border-radius: 15px;
-        }
-    </style>
+<title>JSON Converter</title>
+<style>
+body {
+text-align: center;
+font-family: Arial;
+background: lightgray;
+}
+textarea,button {
+margin: 8px;
+padding: 8px;
+}
+textarea {
+width: 80%;
+height: 120px;
+}
+button {
+background: blue;
+color: white;
+border: 0;
+}
+</style>
 </head>
 <body>
-    <div class="newspaper">
-        NAME : M Samarth | USN :1BI24CS113
-        <header>
-            <h1>DAILY NEWS</h1>
-            <p>Today's Latest News</p>
-        </header>
-        <section>
-            <h2>National News</h2>
-            <div class="article">
-                <article>
-                <h3>India Makes Progress in Technology</h3>
-                <p>India is making rapid progress in technology and digital services.</p>
-            </article>
-            <article>
-                <h3>Education News</h3>
-                <p>Many students are using modern technology for better education.</p>
-            </article>
-            </div>
-        </section>
-        <aside>
-            <h3>Quick News</h3>
-            <p>Sports and weather updates are available here.</p>
-        </aside>
-        <figure>
-            <h3>News Figure</h3>
-            <img src="newspaper.jpeg" alt="">
-            
-            <figcaption>Today's News</figcaption>
-        </figure>
-        <h2 align="center">Sports Results</h2>
-        <table border="1">
-            <tr>
-                <th>Sport</th>
-                <th>Winner</th>
-            </tr>
-            <tr>
-                <td>Cricket</td>
-                <td>India</td>
-            </tr>
-            <tr>
-                <td>Football</td>
-                <td>Brazil</td>
-            </tr>
-        </table>
-        <footer>
-            <p>© 2026 Daily News | All Rights Reserved</p>
-        </footer>
-    </div>
+<h2>JSON Converter</h2>
+<textarea id="data" placeholder="Enter JSON or CSV or String"></textarea><br>
+
+<button onclick="obj()">JSON to Object</button>
+<button onclick="date()">JSON to Date</button>
+<button onclick="csv()">JSON to CSV</button>
+<button onclick="json()">CSV to JSON</button>
+<button onclick="hash()">SHA-256 Hash</button>
+<br>
+<textarea id="output" placeholder="Output will appear here"></textarea>
+<script>
+function obj() {
+var result = JSON.parse(data.value);
+output.value = Object.entries(result)
+.map(([key, value]) => key + ": " + value)
+.join("\n");
+}
+function date() {
+result = new Date(JSON.parse(data.value).date);
+output.value = result;
+}
+function csv() {
+var x = JSON.parse(data.value);
+var s = Object.keys(x[0]).join(",") + "\n";
+x.forEach(function(a) {
+s += Object.values(a).join(",") + "\n";
+});
+output.value = s;
+}
+function json() {
+var l = data.value.trim().split("\n");
+var k = l[0].split(",");
+var x = [];
+for (var i = 1; i < l.length; i++) {
+var v = l[i].split(","), o = {};
+for (var j = 0; j < k.length; j++)
+o[k[j]] = v[j];
+x[i-1] = o;
+}
+output.value = JSON.stringify(x);
+}
+
+async function hash() {
+var str = data.value;
+var bytes = new TextEncoder().encode(str);
+var result = await crypto.subtle.digest('SHA-256', bytes);
+var hash = Array.from(new Uint8Array(result))
+.map(b => b.toString(16).padStart(2, '0'))
+.join('');
+output.value = "Hash: " + hash;
+}
+</script>
 </body>
 </html>
